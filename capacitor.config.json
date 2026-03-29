@@ -1,0 +1,12 @@
+{
+  "appId": "com.lascabezasdeignacio.app",
+  "appName": "Las Cabezas de Ignacio",
+  "webDir": "www",
+  "android": {
+    "allowMixedContent": true,
+    "backgroundColor": "#1a1a2e"
+  },
+  "server": {
+    "androidScheme": "https"
+  }
+}
