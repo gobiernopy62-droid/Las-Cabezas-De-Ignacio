@@ -23,21 +23,22 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: 'npm'
 
       - name: Instalar dependencias
         run: npm install
-
-      - name: Generar íconos desde LasCabezasDeIgnacio.png
-        run: |
-          mkdir -p assets
-          cp www/LasCabezasDeIgnacio.png assets/icon.png
-          npx @capacitor/assets generate --iconBackgroundColor '#1a1a2e' --iconBackgroundColorDark '#1a1a2e' --splashBackgroundColor '#1a1a2e' --splashBackgroundColorDark '#1a1a2e'
 
       - name: Agregar plataforma Android
         run: npx cap add android
 
       - name: Sincronizar archivos
         run: npx cap sync android
+
+      - name: Generar íconos desde LasCabezasDeIgnacio.png
+        run: |
+          mkdir -p assets
+          cp www/LasCabezasDeIgnacio.png assets/icon.png
+          npx @capacitor/assets generate --iconBackgroundColor '#1a1a2e' --iconBackgroundColorDark '#1a1a2e' --splashBackgroundColor '#1a1a2e' --splashBackgroundColorDark '#1a1a2e'
 
       - name: Dar permisos a Gradle
         working-directory: android
