@@ -2,8 +2,8 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Las Cabezas de Ignacio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>¡Mundo Juguetón!</title>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
     <style>
         * {
@@ -24,8 +24,10 @@
 
         #gameContainer {
             position: relative;
-            width: 1280px;
-            height: 720px;
+            width: 100vw;
+            max-width: 177.78vh;
+            height: 56.25vw;
+            max-height: 100vh;
             background-image: url('Fondo.png');
             background-size: cover;
             background-position: center;
@@ -374,7 +376,7 @@
         <!-- ── Pantalla de selección de modo ── -->
         <div id="modeSelectScreen">
             <canvas id="starsCanvas"></canvas>
-            <div class="mode-title">🎮 Las Cabezas de Ignacio 🎮</div>
+            <div class="mode-title">🎮 ¡Mundo Juguetón! 🎮</div>
             <div class="mode-subtitle">Elige tu modo de juego</div>
             <div class="mode-cards">
                 <div class="mode-card historia" onclick="selectMode('historia')">
